@@ -16,8 +16,9 @@ smart_gaps on
 
 # Assign applications to workspaces
 #  xprop | grep "CLASS"
-assign [class="Google-chrome"] 1
+assign [class="Google-chrome"] 3
 assign [class="Code"] 2
+assign [class="Google Play Music Desktop Player"] 5
 
 set $black       #212121
 set $darkblack   #000000
@@ -43,7 +44,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Iosevka 
+font pango:Iosevka 15
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -54,10 +55,10 @@ bindsym $mod+Return exec alacritty
 # Kill focused window
 bindsym $mod+Shift+q kill
 
-
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Helvetica Neue 15" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Iosevka 15" '
 
+#font pango:Iosevka 
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
 
