@@ -16,8 +16,8 @@ smart_gaps on
 
 # Assign applications to workspaces
 #  xprop | grep "CLASS"
-assign [class="Firefox"] 1
-assign [class="sublime_text"] 2
+assign [class="Google-chrome"] 1
+assign [class="Code"] 2
 
 set $black       #212121
 set $darkblack   #000000
@@ -43,11 +43,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Helvetica Neue, FontAwesome 11
- 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:Iosevka 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -158,52 +154,92 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# Audio controls (now provided by Plasma)
-# bindsym XF86AudioLowerVolume exec ~/audio.sh --down
-# bindsym XF86AudioRaiseVolume exec ~/audio.sh --up
+# Brightness
+bindsym XF86MonBrightnessUp exec xbacklight + 10
+bindsym XF86MonBrightnessDown exec xbacklight - 10
+
+#increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id bash "/home/ghuntley/.config/i3/volume" up
+
+#decrease sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id bash "/home/ghuntley/.config/i3/volume" down
+
+# mute sound
+bindsym XF86AudioMute exec --no-startup-id bash "/home/ghuntley/.config/i3/volume" mute
+
+# Next Song
+#bindsym XF86AudioNext exec --no-startup-id cmus-remote --next && pkill --signal SIGRTMIN+13 i3blocks
+
+# Prev Song
+#bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal SIGRTMIN+13 i3blocks
+
+# Play Pause
+#bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
+
+# Screenshot
+bindsym Print exec teiler
+
+# switch workspace
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+  # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 5 ppt
-        bindsym k resize grow height 10 px or 5 ppt
-        bindsym l resize shrink height 10 px or 5 ppt
-        bindsym semicolon resize grow width 10 px or 5 ppt
+  # Pressing left will shrink the window’s width.
+  # Pressing right will grow the window’s width.
+  # Pressing up will shrink the window’s height.
+  # Pressing down will grow the window’s height.
+  bindsym j resize shrink width 10 px or 5 ppt
+  bindsym k resize grow height 10 px or 5 ppt
+  bindsym l resize shrink height 10 px or 5 ppt
+  bindsym semicolon resize grow width 10 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 5 ppt
-        bindsym Down resize grow height 10 px or 5 ppt
-        bindsym Up resize shrink height 10 px or 5 ppt
-        bindsym Right resize grow width 10 px or 5 ppt
+  # same bindings, but for the arrow keys
+  bindsym Left resize shrink width 10 px or 5 ppt
+  bindsym Down resize grow height 10 px or 5 ppt
+  bindsym Up resize shrink height 10 px or 5 ppt
+  bindsym Right resize grow width 10 px or 5 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
 # i3bar
-#bar {
-#        verbose yes
-#        position bottom 
-#        status_command i3blocks
-#        i3bar_command i3bar -t
-#        colors {
-#          statusline #ffffff
-#          background $transparent
-#        }
-#}
+bar {
+  i3bar_command i3bar
+  status_command i3blocks 
+  position top
+  #font pango:...
+  strip_workspace_numbers yes
+  separator_symbol "-"
+  workspace_buttons yes
+  bindsym button4 nop
+  bindsym button5 nop
+  tray_padding 0
+
+  colors {
+    statusline    #ffffff
+    background    #000000
+    separator     #000000ff
+      #                  BORDER      BACKGROUND    TEXT
+    focused_workspace   #00000000    #00000000   #c6ff00
+    inactive_workspace  #00000000    #00000000   #dddddd
+    active_workspace    #00000000    #00000000   #ffffff
+    urgent_workspace    #b71c1c      #b71c1c     #00000000
+    binding_mode        #b71c1c      #b71c1c     #00000000
+  }
+}
+
 
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
 for_window [class="yakuake"] floating enable
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-center ~/.dotfiles/wallpapers/sadie.jpg --image-bg white
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
