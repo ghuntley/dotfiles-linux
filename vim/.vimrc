@@ -20,6 +20,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'crusoexia/vim-monokai'
   Plug 'godlygeek/tabular'
   Plug 'ConradIrwin/vim-bracketed-paste/'
+  Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': './install.sh'
+    \ }
 call plug#end()
 
 " color scheme
