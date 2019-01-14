@@ -14,3 +14,6 @@ install:
 	stow tmux
 	stow vim
 	stow X
+	git add -A
+	git commit -m bump
+	git push origin master
