@@ -236,6 +236,8 @@ bar {
   }
 }
 
+# automatically lock when laptop lid closes
+exec --no-startup-id xss-lock -- 
 
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
