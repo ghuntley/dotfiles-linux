@@ -1,1 +1,2 @@
-exclude.txt
+*/obs-studio/logs
+*/obs-studio/profiler_data

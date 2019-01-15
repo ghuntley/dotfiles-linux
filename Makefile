@@ -9,6 +9,7 @@ install:
 	stow i3blocks
 	stow konsole
 	stow plasma
+	stow obs-studio
 	stow offlineimap
 	stow ssh
 	stow tmux
