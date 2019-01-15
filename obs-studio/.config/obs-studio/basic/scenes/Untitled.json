@@ -53,8 +53,8 @@
         "sync": 0,
         "volume": 1.0
     },
-    "current_program_scene": "Alert Box",
-    "current_scene": "Alert Box",
+    "current_program_scene": "Scene: Alert Box",
+    "current_scene": "Scene: Alert Box",
     "current_transition": "Fade",
     "modules": {
         "auto-scene-switcher": {
@@ -234,32 +234,10 @@
             "name": "Screen Capture"
         },
         {
-            "name": "Alert Box"
+            "name": "Scene: Alert Box"
         }
     ],
     "sources": [
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "xcomposite_input",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Window Capture (Xcomposite)",
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "capture_window": "52428806\r\nhaskell-programming-1.0RC3-screen.pdf  — Okular\r\nokular"
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
         {
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
@@ -510,52 +488,21 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Window Capture (Xcomposite)": [],
-                "libobs.show_scene_item.Window Capture (Xcomposite)": []
+                "OBSBasic.SelectScene": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Alert Box",
+            "name": "Scene: Alert Box",
             "private_settings": {},
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "id_counter": 4,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "id": 4,
-                        "locked": false,
-                        "name": "Window Capture (Xcomposite)",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
+                "id_counter": 9,
+                "items": []
             },
             "sync": 0,
             "volume": 1.0

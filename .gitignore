@@ -1,4 +1,4 @@
 # obs-studio
 *.bak
-*/obs-studio/logs/*
-*/obs-studio/profiler_data/*
+**/obs-studio/logs/*
+**/obs-studio/profiler_data/*
