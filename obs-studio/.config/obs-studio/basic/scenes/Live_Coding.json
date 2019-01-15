@@ -53,8 +53,8 @@
         "sync": 0,
         "volume": 1.0
     },
-    "current_program_scene": "Scene",
-    "current_scene": "Scene",
+    "current_program_scene": "Scene: Starting soon",
+    "current_scene": "Scene: Starting soon",
     "current_transition": "Fade",
     "modules": {
         "auto-scene-switcher": {
@@ -256,9 +256,168 @@
         },
         {
             "name": "Input: Full Screen Webcam"
+        },
+        {
+            "name": "Input: Background - Water Loop"
+        },
+        {
+            "name": "Input: Background - Sadie"
         }
     ],
     "sources": [
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Background - White",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {},
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Image - Sadie",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "/home/ghuntley/.dotfiles/wallpapers/sadie.jpg"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Color Source": [],
+                "libobs.hide_scene_item.Image": [],
+                "libobs.show_scene_item.Color Source": [],
+                "libobs.show_scene_item.Image": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Input: Background - Sadie",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "id_counter": 2,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "id": 2,
+                        "locked": true,
+                        "name": "Background - White",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 3.4149999618530273,
+                            "y": 3.4149999618530273
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Image - Sadie",
+                        "pos": {
+                            "x": 368.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.1228070259094238,
+                            "y": 1.1228070259094238
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Input: Background - Water Loop",
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "id_counter": 0,
+                "items": []
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
         {
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
