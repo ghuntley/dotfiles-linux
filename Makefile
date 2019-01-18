@@ -11,6 +11,7 @@ install:
 	stow plasma
 	stow obs-studio
 	stow offlineimap
+	stow nixpkgs
 	stow ssh
 	stow tmux
 	stow vim
