@@ -14,6 +14,7 @@ install:
 	stow nixpkgs
 	stow ssh
 	stow tmux
+	stow terminator
 	stow vim
 	stow X
 	git add -A
