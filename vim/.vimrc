@@ -26,7 +26,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'easymotion/vim-easymotion'
   Plug 'ervandew/supertab'
-  Plug 'ctrlpvim/ctrlp.vim.git'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': './install.sh'
