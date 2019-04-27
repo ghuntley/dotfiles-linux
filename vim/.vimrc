@@ -20,6 +20,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'crusoexia/vim-monokai'
   Plug 'godlygeek/tabular'
   Plug 'ConradIrwin/vim-bracketed-paste/'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'spwhitt/vim-nix'
+  Plug 'ahf/twelf-syntax'
+  Plug 'tpope/vim-repeat'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'ervandew/supertab'
+  Plug 'ctrlpvim/ctrlp.vim.git'
   Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': './install.sh'
