@@ -1,7 +1,0 @@
-# obs-studio
-*.bak
-**/obs-studio/logs/*
-**/obs-studio/profiler_data/*
-# don't commit obs secrets!
-**/obs-studio/**/service.json
-
